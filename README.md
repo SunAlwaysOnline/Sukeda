@@ -12,4 +12,7 @@
 
 ### 首页
 
-<img height="500px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg">
+<div>
+<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
+<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
+</div>
