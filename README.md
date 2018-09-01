@@ -13,15 +13,14 @@
 ### 首页与教务页面
 <br>
 <div align="center">
-  <img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
-  <div width="100px" height="100px"></div> 
-  <img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%95%99%E5%8A%A1%E9%A1%B5%E9%9D%A2.jpg"/>
+  <img height="700px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
+  <img height="700px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%95%99%E5%8A%A1%E9%A1%B5%E9%9D%A2.jpg"/>
 </div>
 
 
 ### 新闻页面与成绩查询
 <br>
 <div align="center">
-<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%96%B0%E9%97%BB%E9%A1%B5%E9%9D%A2.jpg"/>
-<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%9F%A5%E8%AF%A2%E6%88%90%E7%BB%A9.jpg"/>
+  <img height="700px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%96%B0%E9%97%BB%E9%A1%B5%E9%9D%A2.jpg"/>
+  <img height="700px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%9F%A5%E8%AF%A2%E6%88%90%E7%BB%A9.jpg"/>
 </div>
