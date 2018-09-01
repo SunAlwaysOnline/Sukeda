@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/back"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="18dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:text="验证学生身份"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_form_stu_id"
+        style="@style/bg_layout"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ly_back"
+        android:layout_marginTop="20dp"
+        android:clickable="false">
+
+        <EditText
+            android:id="@+id/et_stu_id"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:hint="请输入11位或12位学号"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_form_stu_pd"
+        style="@style/bg_layout"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ly_form_stu_id"
+        android:layout_marginTop="10dp"
+        android:clickable="false">
+
+        <EditText
+            android:id="@+id/et_stu_pd"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_form_code"
+        style="@style/bg_layout"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ly_form_stu_pd"
+        android:layout_marginTop="10dp"
+        android:clickable="false">
+
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.5"
+            android:height="80dp"
+            android:hint="验证码"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.5" />
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:text="获取验证码" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_reminder1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ly_form_code"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:text="    进行学生身份验证后，可以免登陆进行查看课表、查询成绩等操作。"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_reminder2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_reminder1"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="    在教务系统重新更改密码后，需要重新验证学生身份，否则会出现预料之外的错误！"
+        android:textColor="#A8A8A8"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_reminder2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/shape"
+        android:text=" 验  证 "
+        android:textSize="20sp" />
+</RelativeLayout>

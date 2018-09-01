@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        style="@style/bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:clickable="false">
+
+        <TextView
+            android:id="@+id/tv_card_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="50dp"
+            android:paddingTop="8dp"
+            android:text="变化"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_card_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_vertical|right"
+            android:paddingBottom="8dp"
+            android:paddingRight="20dp"
+            android:paddingTop="8dp"
+            android:text="时间"
+            android:textColor="#333"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:topLeftRadius="8dp"
+        android:topRightRadius="8dp" />
+    <corners android:radius="8dp" />
+    <solid android:color="@drawable/info_item_color_selector" />
+    <stroke
+        android:width="1px"
+        android:color="@color/border_clo" />
+</shape>

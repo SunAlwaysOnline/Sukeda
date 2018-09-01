@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <TextView
+        android:id="@+id/tv_xn"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_xq"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_course_code"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_course_nature"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_course_belong"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_credit"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_gpa"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_minor_mark"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_score_make_up"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_score_rebuild"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_college"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_remark"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_mark_rebuild"
+        style="@style/item_child_grade" />
+
+
+</LinearLayout>

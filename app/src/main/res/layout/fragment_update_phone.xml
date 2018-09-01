@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/back"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="18dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:text="具体操作"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_text"
+        style="@style/bg_layout"
+        android:layout_below="@+id/ly_back"
+        android:layout_marginTop="20dp"
+        android:clickable="false">
+
+        <EditText
+            android:id="@+id/et_object"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:hint="操作对象"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_verify"
+        style="@style/bg_layout"
+        android:layout_below="@+id/ly_text"
+        android:layout_marginTop="10dp"
+        android:clickable="false">
+
+        <EditText
+            android:id="@+id/et_verify_code"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:hint="验证码"
+            android:paddingLeft="20dp"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_get_verify_code"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="2"
+            android:background="@drawable/shape"
+            android:text="获取验证码" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ly_verify"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        android:text="-------------------提示-----------------"
+        android:textColor="#A8A8A8" />
+
+    <Button
+        android:id="@+id/btn_sure_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_reminder"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape"
+        android:text="确认绑定还是修改 "
+        android:textSize="20sp" />
+</RelativeLayout>

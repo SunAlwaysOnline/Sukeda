@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ly_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/back"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="18dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="账号绑定"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_phone"
+        style="@style/bg_layout"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ly_back"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/bg_textview_left"
+            android:text="手机" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/bg_textview_right"
+            android:text="未绑定"
+            android:textColor="#3366cc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_qq"
+        style="@style/bg_layout"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ly_phone"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/bg_textview_left"
+            android:text="QQ" />
+
+        <TextView
+            android:id="@+id/tv_qq"
+            style="@style/bg_textview_right"
+            android:text="未绑定"
+            android:textColor="#3366cc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_wechat"
+        style="@style/bg_layout"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ly_qq"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/bg_textview_left"
+            android:text="微信" />
+
+        <TextView
+            android:id="@+id/tv_wechat"
+            style="@style/bg_textview_right"
+            android:text="未绑定"
+            android:textColor="#3366cc" />
+    </LinearLayout>
+
+
+</RelativeLayout>

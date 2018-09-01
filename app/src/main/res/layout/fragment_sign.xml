@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0F3F6">
+
+            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <GridView
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/banner"
+                android:layout_marginTop="5dp"
+                android:background="#fff"
+                android:horizontalSpacing="2dp"
+                android:numColumns="4"
+                android:padding="3dp"
+                android:scrollbars="none"
+                android:verticalSpacing="2dp">
+
+            </GridView>
+
+            <include layout="@layout/layout_include_news_inform" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

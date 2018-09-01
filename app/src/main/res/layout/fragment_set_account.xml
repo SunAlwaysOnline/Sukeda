@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F3F6"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ly_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/back"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="18dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:text="账号设置"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_update_username"
+        style="@style/bg_layout"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ly_back"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            style="@style/bg_textview_left"
+            android:text="更改账号" />
+
+        <TextView
+            android:id="@+id/tv_update_username"
+            style="@style/bg_textview_right"
+            android:text="修改"
+            android:textColor="#3366cc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_update_password"
+        style="@style/bg_layout"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ly_update_username"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/bg_textview_left"
+            android:text="登录密码" />
+
+        <TextView
+            android:id="@+id/tv_update_password"
+            style="@style/bg_textview_right"
+            android:text="修改"
+            android:textColor="#3366cc" />
+    </LinearLayout>
+
+</RelativeLayout>

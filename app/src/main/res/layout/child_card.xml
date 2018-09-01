@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <TextView
+        android:id="@+id/tv_card_remain"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_card_type"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_card_subSystem"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_card_times"
+        style="@style/item_child_grade" />
+
+    <TextView
+        android:id="@+id/tv_card_state"
+        style="@style/item_child_grade" />
+
+
+</LinearLayout>
