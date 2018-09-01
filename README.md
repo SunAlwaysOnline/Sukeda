@@ -10,9 +10,9 @@
 
 ## 应用截图
 
-### 首页
+### 首页与教务页面
 
 <div>
 <img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
-<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
+<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%95%99%E5%8A%A1%E9%A1%B5%E9%9D%A2.jpg"/>
 </div>
