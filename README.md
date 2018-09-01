@@ -14,5 +14,6 @@
 
 <div>
 <img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E9%A6%96%E9%A1%B5.jpg"/>
-<img height="600px" src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%95%99%E5%8A%A1%E9%A1%B5%E9%9D%A2.jpg"/>
+<img height="600px" style="margin-left:50px"
+     src="https://github.com/SunAlwaysOnline/Sukeda/blob/master/screenshot/%E6%95%99%E5%8A%A1%E9%A1%B5%E9%9D%A2.jpg"/>
 </div>
