@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -113,14 +114,12 @@ public class NewsInfoActivity extends AppCompatActivity {
 
                 if (url.startsWith("http://news")) {
                     NewsReset.imgReset(mWebView);
-                    //NewsReset.deleteContent_news(mWebView);
                     Log.e("tag", "news");
+
                 } else {
-                    // NewsReset.deleteContent_notify(mWebView);
                     Log.e("tag", "notify");
                 }
 
-                //NewsReset.click(mWebView);
             }
         });
 
@@ -179,8 +178,8 @@ public class NewsInfoActivity extends AppCompatActivity {
                             tv_click_rate.setText("浏览次数 : " + times);
                         }
                     });
-                } catch (IOException e) {
-                    e.printStackTrace();
+                } catch (Exception e) {
+                    Toast.show_info(NewsInfoActivity.this, "当前图片不包含新闻！");
                 }
             }
         }).start();
@@ -198,5 +197,6 @@ public class NewsInfoActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
         }
     }
+
 }
 

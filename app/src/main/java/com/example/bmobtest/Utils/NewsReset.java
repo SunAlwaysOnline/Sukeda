@@ -7,6 +7,7 @@ import android.webkit.WebView;
  */
 
 public class NewsReset {
+
     /**
      * 将图片缩放到与屏幕等宽
      */
@@ -15,8 +16,9 @@ public class NewsReset {
                 + "var objs = document.getElementsByTagName('img'); "
                 + "for(var i=0;i<objs.length;i++)  " + "{"
                 + "var img = objs[i];   "
-                + "    img.style.width = '100%';   "
-                + "    img.style.height = 'auto';   "
+                + "     img.align='center';   "
+                + "    img.style.width = 'auto';   "
+                + "    img.style.height = '240px';   "
                 + "}" + "})();");
     }
 
@@ -82,6 +84,21 @@ public class NewsReset {
                 "for(var i=0;i<imgs.length;i++){" +
                 "imgs[i].onclick=function(){ return false; } }" +
                 "} javascript:picclick();");
+    }
+
+    //查看大图
+    public static void addImageClickListner(WebView mWebView) {
+        // 这段js函数的功能就是，遍历所有的img节点，并添加onclick函数，函数的功能是在图片点击的时候调用本地java接口并传递url过去
+        mWebView.loadUrl("javascript:(function(){" +
+                "var objs = document.getElementsByTagName(\"img\"); " +
+                "for(var i=0;i<objs.length;i++)  " +
+                "{"
+                + "    objs[i].onclick=function()  " +
+                "    {  "
+                + "        window.imagelistner.openImage(this.src);  " +
+                "    }  " +
+                "}" +
+                "})()");
     }
 
     public static void delete(WebView mWebView) {
