@@ -93,8 +93,6 @@
             android:name=".Activity.LibraryActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".Activity.NewsInformListActivity" />
-        <activity android:name=".BookShow.BookFirst" />
-        <activity android:name=".BookShow.BookSecond"></activity>
     </application>
 
 </manifest>

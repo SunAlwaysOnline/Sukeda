@@ -24,31 +24,54 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+
     //以下SDK开发者请根据需要自行选择
+
     //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+
     //3.5.5：请务必查看下面注释[1]
+
     // compile 'cn.bmob.android:bmob-sdk:3.5.5'
+
     //Bmob的数据服务SDK
+
     //Bmob的消息推送SDK
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
     //Bmob基础数据服务的依赖
+
     //Bmob推送服务的依赖
+
     //解析HTML的依赖
+
     //网络请求框架的依赖
+
     //compile 'com.jude:rollviewpager:1.4.6'
+
     //加载图片的框架
+
     //轮播图框架的依赖   https://github.com/youth5201314/banner
+
     //compile 'com.github.limedroid:XRichText:v1.0.0'
+
     //图片剪裁
+
     //compile 'com.github.yalantis:ucrop:2.2.1-native'
+
     //动态权限申请
+
     //compile 'com.github.hotchemi:permissionsdispatcher:2.4.0'
+
     //annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.4.0'
+
     //常用工具类
+
     //校园概况的视图
+
     //首页可拖动的GridView
+
     //compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'cn.bmob.android:bmob-sdk:3.5.5'
     compile 'cn.bmob.android:bmob-push:1.0.1'
@@ -56,7 +79,7 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.youth.banner:banner:1.4.10'
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:26.0.0-beta1'
     compile 'com.android.support:cardview-v7:26.0.0-alpha1'
     compile 'com.blankj:utilcode:1.12.0'
     compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
