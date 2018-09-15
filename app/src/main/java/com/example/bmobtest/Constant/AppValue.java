@@ -14,5 +14,5 @@ public class AppValue {
     // Master Key，超级权限Key。应用开发或调试的时候可以使用该密钥进行各种权限的操作
     public static final String MASTER_KAY = "69e036a32229d8cfeffb2bb04beb411b";
     //当前app的版本号，处于第一代版本
-    public static final String APP_VERSION = "1";
+    public static final String APP_VERSION = "5";
 }
