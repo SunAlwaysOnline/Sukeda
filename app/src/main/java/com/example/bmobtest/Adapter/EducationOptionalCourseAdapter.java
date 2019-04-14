@@ -25,9 +25,8 @@ public class EducationOptionalCourseAdapter extends BaseQuickAdapter<EducationOp
 
     @Override
     protected void convert(BaseViewHolder helper, EducationOptionalCourse item) {
-        helper.setText(R.id.tv_education_name, item.getName())
-                .setText(R.id.tv_education_time, item.getXueNian_xueQi())
-                .setText(R.id.tv_education_category, item.getCategory());
+        helper.setText(R.id.tv_education_title, item.getTitle())
+                .setText(R.id.tv_education_time, item.getTime());
     }
 
 }

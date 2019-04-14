@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ public class EducationListFragment extends Fragment {
     private RecyclerView rcv_education_list;
     private int current_page = 1;
     private int shown = 0;
-    private int all_number = 20;
+    private int all_number = 0;
     private String current_url;
     private String category;
     private View rootView;
@@ -149,11 +150,38 @@ public class EducationListFragment extends Fragment {
 
     private String get_true_url() {
         String true_url = "";
-        if (!current_url.contains("news_more_fw_new.asp")) {
-            true_url = "http://jwch.usts.edu.cn/newweb/news_more_new.asp?page=" + current_page + "&" + current_url.split("\\?")[1];
+        if (current_page == 1) {
+            true_url = current_url;
         } else {
-            true_url = "http://jwch.usts.edu.cn/newweb/news_more_fw_new.asp?page=" + current_page + "&" + current_url.split("\\?")[1];
+            //总页数,每页18条信息
+            int all_page = (all_number % 18) == 0 ? (all_number / 18) : (all_number / 18 + 1);
+            String suffix_url = "/" + (all_page + 1 - current_page) + ".htm";
+
+            //公告动态模块
+            if (current_url.contains("/xszl/xxswzn")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/xxswzn" + suffix_url;
+            } else if (current_url.contains("/xszl/xjgl")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/xjgl" + suffix_url;
+            } else if (current_url.contains("/xszl/ksxz")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/ksxz" + suffix_url;
+            } else if (current_url.contains("/xszl/xsbgxz")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/xsbgxz" + suffix_url;
+            }
+
+
+            //信息公开模块
+            else if (current_url.contains("/fwzn/fwzn")) {
+                true_url = "http://jwch.usts.edu.cn/fwzn/fwzn" + suffix_url;
+            } else if (current_url.contains("/fwzn/xnxl")) {
+                true_url = "http://jwch.usts.edu.cn/fwzn/xnxl" + suffix_url;
+            } else if (current_url.contains("/fwzn/kbcx")) {
+                true_url = "http://jwch.usts.edu.cn/fwzn/kbcx" + suffix_url;
+            } else if (current_url.contains("dwksxx")) {
+                true_url = "http://jwch.usts.edu.cn/fwzn/dwksxx" + suffix_url;
+            }
+
         }
+        Log.e("true_page", true_url);
         return true_url;
     }
 }

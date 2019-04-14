@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,41 +37,18 @@ public class EducationWebFragment extends Fragment {
     private WebView wv_education;
     private String url;
     private LinearLayout ly_education_info;
-    private TextView tv_education_xueNian_xueQi;
-    private TextView tv_education_category;
-    private TextView tv_education_limit;
-    private TextView tv_education_course_time;
-    private TextView tv_education_teacher;
-    private TextView tv_education_department;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_education_web, container, false);
         url = getArguments().getString("url");
+        Log.e("web_url", url);
         initView(v);
         return v;
     }
 
-    private void initDetail(View v) {
-        ly_education_info = (LinearLayout) v.findViewById(R.id.ly_education_info);
-        EducationOptionalCourse course = (EducationOptionalCourse) getArguments().get("item");
-        if (course != null && !TextUtils.isEmpty(course.getCategory())) {
-            ly_education_info.setVisibility(View.VISIBLE);
-            tv_education_xueNian_xueQi = (TextView) v.findViewById(R.id.tv_education_xueNian_xueQi);
-            tv_education_category = (TextView) v.findViewById(R.id.tv_education_category);
-            tv_education_limit = (TextView) v.findViewById(R.id.tv_education_limit);
-            tv_education_course_time = (TextView) v.findViewById(R.id.tv_education_course_time);
-            tv_education_teacher = (TextView) v.findViewById(R.id.tv_education_teacher);
-            tv_education_department = (TextView) v.findViewById(R.id.tv_education_department);
-            tv_education_xueNian_xueQi.setText("学年学期：" + course.getXueNian_xueQi());
-            tv_education_category.setText("类别：" + course.getCategory());
-            tv_education_limit.setText("限报数：" + course.getLimit());
-            tv_education_course_time.setText("上课时间：" + course.getCourse_time());
-            tv_education_teacher.setText("教师姓名：" + course.getTeacher());
-            tv_education_department.setText("开课部门：" + course.getDepartment());
-        }
-    }
-
     private void initView(View v) {
+        ly_education_info = (LinearLayout) v.findViewById(R.id.ly_education_info);
         ly_back = (LinearLayout) v.findViewById(R.id.ly_back);
         ly_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +58,7 @@ public class EducationWebFragment extends Fragment {
         });
         ShowOrHiddenUtil.hidden_home_bottom(getActivity());
         initWebView(v);
-        initDetail(v);
+
     }
 
     private void initWebView(View v) {
@@ -109,9 +87,11 @@ public class EducationWebFragment extends Fragment {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String html = new String(response.body().bytes(), "gb2312");
+                String html = new String(response.body().bytes(), "utf-8");
                 Document document = Jsoup.parse(html);
-                Elements elements = document.select("article[id=main-column]");
+                Elements elements = document.select("div[class=content fl]");
+                //删除下一条
+                elements.select("div[class=content-sxt fl]").remove();
                 final String content = elements.toString();
                 getActivity().runOnUiThread(new Runnable() {
                     @Override

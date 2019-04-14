@@ -19,7 +19,7 @@
             android:padding="2dp">
 
             <TextView
-                android:id="@+id/tv_education_name"
+                android:id="@+id/tv_education_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -42,12 +42,11 @@
                     android:layout_weight="5"
                     android:gravity="left"
                     android:paddingBottom="5dp"
-                    android:text="学年学期"
+                    android:text="时间"
                     android:textColor="#696969"
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tv_education_category"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -55,7 +54,7 @@
                     android:layout_weight="3"
                     android:gravity="right"
                     android:paddingBottom="5dp"
-                    android:text="类别"
+                    android:text=""
                     android:textColor="#696969"
                     android:textSize="15sp" />
 

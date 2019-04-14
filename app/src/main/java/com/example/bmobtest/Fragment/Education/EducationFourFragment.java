@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ import java.util.List;
 
 public class EducationFourFragment extends Fragment {
     private View rootView;
-    private String url;
+    private String current_url;
     private RecyclerView rcv_education;
     private int all_number;
     private int shown = 0;
@@ -38,7 +39,7 @@ public class EducationFourFragment extends Fragment {
         if (rootView == null) {
             View v = inflater.inflate(R.layout.fragment_item_education, container, false);
             rootView = v;
-            url = getArguments().getString("url");
+            current_url = getArguments().getString("url");
             initRecyclerView(v);
             initView(v);
         }
@@ -56,7 +57,7 @@ public class EducationFourFragment extends Fragment {
     }
 
     private void initView(View v) {
-        EducationOptionalCourseListUtil.get_list(url, new EducationOptionalCourseListUtil.get_ListCall() {
+        EducationOptionalCourseListUtil.get_list(get_true_url(), new EducationOptionalCourseListUtil.get_ListCall() {
             @Override
             public void success(final List<EducationOptionalCourse> list, final int all) {
                 getActivity().runOnUiThread(new Runnable() {
@@ -97,7 +98,7 @@ public class EducationFourFragment extends Fragment {
                 EducationWebFragment fragment = new EducationWebFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString("url", list.get(position).getUrl());
-                bundle.putSerializable("item",list.get(position));
+                bundle.putSerializable("item", list.get(position));
                 fragment.setArguments(bundle);
                 transaction
                         .setCustomAnimations(R.anim.in_from_right, R.anim.out_to_left)
@@ -139,8 +140,24 @@ public class EducationFourFragment extends Fragment {
     }
 
     private String get_true_url() {
-        String true_url = "http://jwch.usts.edu.cn/newweb/news_more_gxk_new.asp?page=" + current_page + "&" + url.split("\\?")[1];
-        return true_url;
+        String true_url = "";
+        if (current_page == 1) {
+            true_url = current_url;
+        } else {
+            //总页数,每页18条信息
+            int all_page = (all_number % 18) == 0 ? (all_number / 18) : (all_number / 18 + 1);
+            String suffix_url = "/" + (all_page + 1 - current_page) + ".htm";
 
+            //公告动态模块
+            if (current_url.contains("/xszl/shxqgxkjj")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/shxqgxkjj" + suffix_url;
+            } else if (current_url.contains("/xszl/jfxqgxkjj")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/jfxqgxkjj" + suffix_url;
+            } else if (current_url.contains("/xszl/tpxqgxkjj")) {
+                true_url = "http://jwch.usts.edu.cn/xszl/tpxqgxkjj" + suffix_url;
+            }
+        }
+        Log.e("true_page", true_url);
+        return true_url;
     }
 }

@@ -135,8 +135,8 @@ public class EducationFragment extends Fragment {
     //初始化公告GridView
     private void initGrdView_gonggao(View v) {
         gv_gonggao = (MyGridView) v.findViewById(R.id.gv_gonggao);
-        String img[] = new String[]{"choose_course", "notice_online", "education_dynamic", "document_download"};
-        final String name[] = new String[]{"选课通知", "公告在线", "教务动态", "文档下载"};
+        String img[] = new String[]{"transaction_guide", "school_manage", "exam_know", "table_download"};
+        final String name[] = new String[]{"事务指南", "学籍管理", "考试须知", "表格下载"};
         //生成动态数组，并且转入数据
 
         ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
@@ -161,10 +161,10 @@ public class EducationFragment extends Fragment {
         gv_gonggao.setAdapter(saImageItems);
         //添加消息处理
         final String url[] = {
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=1&lmid=32",
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=1&lmid=61",
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=1&lmid=62",
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=1&lmid=63"};
+                "http://jwch.usts.edu.cn/xszl/xxswzn.htm",
+                "http://jwch.usts.edu.cn/xszl/xjgl.htm",
+                "http://jwch.usts.edu.cn/xszl/ksxz.htm",
+                "http://jwch.usts.edu.cn/xszl/xsbgxz.htm"};
         gv_gonggao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -204,8 +204,8 @@ public class EducationFragment extends Fragment {
     //初始化信息公开GridView
     private void initGrdView_info_gongkai(View v) {
         gv_info_gongkai = (MyGridView) v.findViewById(R.id.gv_info_gongkai);
-        String img[] = new String[]{"article_browse", "calendar", "course_query", "external_exam"};
-        final String name[] = new String[]{"发文一览", "学校年历", "课表查询", "对外考试"};
+        String img[] = new String[]{"service_guide", "calendar", "course_query", "external_exam"};
+        final String name[] = new String[]{"服务指南", "学校年历", "课表查询", "对外考试"};
         //生成动态数组，并且转入数据
 
         ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
@@ -230,10 +230,10 @@ public class EducationFragment extends Fragment {
         gv_info_gongkai.setAdapter(saImageItems);
         //添加消息处理
         final String url[] = {
-                "http://jwch.usts.edu.cn/newweb/news_more_fw_new.asp?zlmid=3&lmid=11",
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=3&lmid=67",
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=3&lmid=69",
-                "http://jwch.usts.edu.cn/newweb/news_more_new.asp?zlmid=3&lmid=85"};
+                "http://jwch.usts.edu.cn/fwzn/fwzn.htm",
+                "http://jwch.usts.edu.cn/fwzn/xnxl.htm",
+                "http://jwch.usts.edu.cn/fwzn/kbcx.htm",
+                "http://jwch.usts.edu.cn/fwzn/dwksxx.htm"};
         gv_info_gongkai.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

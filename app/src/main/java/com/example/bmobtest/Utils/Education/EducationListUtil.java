@@ -38,19 +38,19 @@ public class EducationListUtil {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String html = new String(response.body().bytes(), "gb2312");
+                String html = new String(response.body().bytes(), "utf-8");
                 Document document = Jsoup.parse(html);
-                Elements elements = document.select("section[id=list-body]");
-                String number = elements.select("p").text().split("共")[1].split("条")[0];
+                Elements elements = document.select("div[class=list fl]");
+                String number = elements.select("span[class=p_t]").text().split("共")[1].split("条")[0];
                 int all = Integer.parseInt(number);
-                Elements elements1 = elements.select("li");
+                Elements elements1 = elements.select("ul").select("li");
                 Education education = null;
                 List<Education> list = new ArrayList<Education>();
                 for (Element element : elements1) {
                     education = new Education();
-                    education.setUrl("http://jwch.usts.edu.cn/newweb/" + element.select("a[href]").attr("href"));
-                    education.setTitle("" + element.select("span").text());
-                    education.setTime("" + element.select("time").text());
+                    education.setUrl("http://jwch.usts.edu.cn/fwzn/" + element.select("a[href]").attr("href"));
+                    education.setTitle("" + element.select("a[href]").text());
+                    education.setTime("" + element.select("i").text());
                     list.add(education);
 
                 }
